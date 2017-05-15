@@ -1,0 +1,82 @@
+\subsection{Nomenclatura}
+\begin{itemize}
+    \item[Gràfics en Computador:]
+        Disciplina de la informàtica que estudia \textbf{models} i els \textbf{algorismes}
+        implicats en la construcció d'imatges 2D a partir d'un món virtual.
+
+    \item[Visualització 3D interactiva:]
+        Descriu qualsevol ús dels computadors per \textbf{crear} o \textbf{interaccionar}
+        amb imatges a partir d'un món virtual i des d'un determinat punt de vista.
+
+    \item[FPS:] Frames per segon. Imatges / segons.
+        \begin{itemize}
+            \item Interacció amb FPS mínima.
+                \subitem General: 6 FPS
+                \subitem Videojocs: 30 o 60 FPS.
+                \subitem Pe\lgem{}ícules: 24 FPS.
+        \end{itemize}
+
+    \item[Imatge:] Resultat visualitzada per pantalla.
+    \item[Modelatge:] Objectes, material i textures.
+        \begin{itemize}
+            \item[Objectes:] Representació 3D ``volum''.
+            \item[Textures:] Modelen realisme addicional, per detallar característiques.
+            \item[Material:] Comportament dels objectes amb la llum.
+                \subitem Llum: emissió, absorció i scattering.
+            \item[Tècniques:] Visualització i i\lgem{}uminació
+        \end{itemize}
+    \item[Punt de vista:] Des d'on mires i cap a on.
+        \subitem[Càmera:] Punt de vista i expansió de la visió.
+    \item[Models 3D:] Objectes que tenen un cert volum.
+    \item[Dispositiu gràfic:] !!!!!!!!!!!!!!!
+    \item[frame buffer:] on guardem el frame per mostrar seguidament.
+    \item[Elements gràfics:] .
+        \begin{itemize}
+            \item[Objectes:] Volum, materials i textures.
+                \item Llum: Objecte que emet llum.
+                \begin{itemize}
+                    \item[Superficials:] Només coneixem la frontera.
+                    \item[Volumètrics:] 
+                \end{itemize}
+            \item[Càmera:] Posició del observador i frustum.
+                \subitem Frustum: Part visible de l'escena.
+            \item[Viewport:] Conjunt de píxels on es formarà la imatge final. !!!!!!!!!!!!!!!!!!!!!!!
+        \end{itemize}
+        
+    % Interessant a posar al pdf.
+    \item[Pipeline de visualització:] Conjunt d'etapes que segueix en el procés de visualització.
+        (i\lgem{uminació}, projecció, \dots)
+    \item[Rendering:] Visualització, procés de càlcul del color al píxel final.
+        Normalment té una relació amb la i\lgem{uminació} final.
+        
+    \item[Shaders] GPU. Fils d'execució de la GPU.
+\end{itemize}
+
+\subsection{Visualització -- No section...}
+\subsubsection{Mètode Projectius}
+Zbuffer
+\begin{itemize}
+    \item Més ràpid. (basat en hardware)
+    \item Menys realista.
+    \item Fàcil d'implementar amb \textbf{shaders}.
+\end{itemize}
+
+\subsubsection{Mètode Ray*}
+RayCasting / Raytracing
+\begin{itemize}
+    \item I\lgem{uminació} global.
+    \item Tradicionalment és lent.
+    \item Recentment és pot implementar en GPU.
+    \item Fàcils d'adaptar per models volumètrics.
+\end{itemize}
+
+
+\subsection{Components software}
+Gràfic: teclat -> CPU -> GPU -> Frame buffer -> pantalla
+                <-> CPU Memori i el mateix epr al GPU.
+
+tbl
+Aplication program  API             Hardware{2}
+High                Intermediate    Low     GPU-based
+Paraview            Qt              OpenGL  GLSL
+Unity               WebGL

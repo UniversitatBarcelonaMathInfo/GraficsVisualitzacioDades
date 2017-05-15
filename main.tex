@@ -1,0 +1,48 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[catalan]{babel}
+
+% Per fer hiperlinks
+\usepackage{hyperref}
+
+% Per poder incloure eps dins del pdf.
+\usepackage{graphicx}
+\usepackage{epstopdf}
+
+% Fer subfigures
+\usepackage{caption}
+\usepackage{subcaption}
+
+% paquet per a fer boniquet.
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{Sistach}
+\rfoot{Página \thepage{} de \pageref{LastPage}}
+% Fi boniquet.
+
+
+\usepackage{ulem}
+
+
+\title{Els meus apunts}
+\author{Arnau Sistach Reinoso}
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\newpage
+\tableofcontents
+\thispagestyle{empty}
+\newpage
+\listoffigures
+\thispagestyle{empty}
+\newpage
+\thispagestyle{empty}
+~\newpage
+\setcounter{page}{1}
+\input{GD/tot.tex}
+\label{LastPage}
+\end{document}
+
+http://tfg-informatica-ub.wikidot.com/
