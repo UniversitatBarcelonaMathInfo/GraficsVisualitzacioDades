@@ -1,0 +1,30 @@
+%
+Primaries
+\begin{itemize}
+    \item sucursal(\underline{nombre-sucursal}, ciudad-sucursal, activo)
+    \item cliente(\underline{id-cliente}, nombre-cliente, calle-cliente,
+        ciudad-cliente,
+            id-empleado, banquero-consejero-tipo)
+    \item empleado(\underline{id-empleado}, fecha-comienzo, número-teléfono,
+        nombre-empleado, jefe-empleado-id)
+    \item préstamo(\underline{número-préstamo}, importe,
+            nombre-sucursal)
+    \item cuenta(\underline{número-cuenta}, saldo)
+    \item cuenta-ahorro(\underline{número-cuenta}, tipo-interés)
+    \item cuenta-corriente(\underline{número-cuenta}, descubierto)
+    \item pago(\underline{número-préstamo}, \underline{número-pago}, fecha-pago,
+        importe-pagado)
+    \item nombre-subordinado(\underline{id-empleado},
+        \underline{nombre-subordinado})
+    
+\end{itemize}
+%
+Llistes
+\begin{itemize}
+    \item trabajo-para, ho he posat dins d'empleado
+    \item banquero-consejero, ho he posat dins de client
+    \item prestatario(\underline{id-cliente}, \underline{número-préstamo})
+    \item préstamo-sucursal, un a varis, dins de préstamo.
+    \item impositor (\underline{id-cliente}, \underline{número-cuenta},
+        fecha-acceso)
+\end{itemize}
